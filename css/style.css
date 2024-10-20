@@ -1,113 +1,144 @@
 /* navbar */
-.container .row .col-md-6 ul li{
-    list-style: none;
+.container .row .col-md-6 ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  flex-wrap: wrap; /* Allow items to wrap to a new line on smaller screens */
 }
-.container .row .col-md-6 a{
-    text-decoration: none;
-    color:  #909090;
-    ;
-    padding-left: 24px;
+
+.container .row .col-md-6 ul li {
+  list-style: none;
 }
-.container .row .col-md-4 .btn-1{
-    width: 119px;
-height:  44px;
-border-radius: 12px 12px 12px 12px;
-border-color: #6DE754;
-background-color: black;
-color: white;
+
+.container .row .col-md-6 a {
+  text-decoration: none;
+  color: #909090;
+  padding-left: 24px;
 }
-.container .row .col-md-4 .btn-2{
-    width: 119px;
-height:  44px;
-border-radius: 12px 12px 12px 12px;
-border-color: #6DE754;
-background-color: #6DE754;
-color: white;
-margin-left: 20px;
+
+.container .row .col-md-4 .btn-1 {
+  width: 119px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #6DE754;
+  background-color: black;
+  color: white;
+}
+
+.container .row .col-md-4 .btn-2 {
+  width: 119px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #6DE754;
+  background-color: #6DE754;
+  color: white;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .container .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .row .col-md-2,
+  .container .row .col-md-6,
+  .container .row .col-md-4 {
+    text-align: center;
+  }
+
+  .container .row .col-md-6 ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .row .col-md-4 {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .container .row .col-md-2 .img-fluid{
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+  .container .row .col-md-2 span{
+  padding-right: 380px;
+  margin: auto;
+  }
 }
 /* main */
-.main{
+.main {
     text-align: center;
+    margin-top: 50px;
 }
-.main h1{
-    font-family: SF Pro Text;
-font-size: 6vw;
-font-weight: 600;
- color: #6DE754;
- margin-top: 80px;
+
+.main h1 {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 6vw;  
+    font-weight: 600;
+    color: #6DE754;
+    margin-top: 80px;
 }
-.main p{
-    color:  #FFFFFF;
-    font-family: SF Pro Text;
-font-size: 6vw;
-font-weight: 600;
+
+.main p {
+    color: #FFFFFF;
+    font-family: SF Pro Text, sans-serif;
+    font-size: 88px;  
+    font-weight: 600;
 }
-.main pre{
-    font-family: SF Pro Text;
+
+.main pre {
+    font-family: SF Pro Text, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
     color: #909090;
+    margin: 20px 0; 
 }
-.main input{
-    width: 100%;
-    max-width: 500px;
-height:60px;
-padding: 8px 0px 8px 16px;
-gap: 4px;
-border-radius: 16px 16px 16px 16px;
-color:  #909090;
-background-color:black ;
+
+.input_img {
+    max-width: 100%;  
+    height: auto;
+    margin-top: 20px;
 }
-.main_btn{
-    width: 100%;
-    position: relative;
-}
-.main_btn button{
-        position: absolute;
-        top: 7px;
-        right: 430px;
-    background: #6DE754;
-    width: 100%;
-    max-width:  175px;
-height: 44px;
-border-radius: 12px;
-font-family: SF Pro Text;
-font-size: 16px;
-font-weight: 600;
-line-height: 20px;
-letter-spacing: 0.01em;
-text-align: center;
-color: #1F392C;
-}
+
+/* Responsive Design */
 @media (min-width: 768px) {
     .main h1 {
-        font-size: 88px; /* Fixed size for larger screens */
+        font-size: 4rem;  
     }
 
-    .main span {
-        font-size: 48px; /* Fixed size for larger screens */
+    .main p {
+        font-size: 2.5rem;  
     }
 
     .main pre {
-        font-size: 16px; /* Fixed size for larger screens */
+        font-size: 1.2rem;  
     }
 }
+
 @media (max-width: 768px) {
     .main h1 {
-        font-size: 48px;
+        font-size: 8vw;  
     }
 
-    .main input {
-        width: 90%;
+    .main p {
+        font-size: 6vw;  
     }
 
-    .main_btn button {
-        right: 10%;
+    .main pre {
+        font-size: 0.9rem;  
+    }
+
+    .input_img {
+        width: 90%;  
+        margin-top: 20px;
     }
 }
+
+       
 /* boxes */
 #boxes .row .col-lg-3 {
     height: 200px;
@@ -140,42 +171,94 @@ margin-top: 15px;
 }
 
 /* better job */
-.container .cont{
-    width:90%;
-height: 850px;
-top: 40px;
-left: 48px;
-gap: 0px;
-border-radius: 12px 12px 12px 12px;
-opacity: 0px;
-background-color: #6DE754;
+.container .cont {
+    width: 90%;
+    max-width: auto;
+    min-height: auto;
+    margin: auto;
+    border-radius: 12px;
+    background-color: #6DE754;
+    padding: 20px;
+    position: relative;
+    
 }
-.container .cont .row .col-lg-12 .large-pre{
-    font-family: SF Pro Text;
-    font-size: 48px;
+
+.container .cont .large-pre {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 6vw;  
     font-weight: 600;
-    line-height: 57.28px;
-    text-align: center; 
+    line-height: 1.2;
     color: #000000;
+    text-align: center;
+    margin-top: 20px;
 }
-.container .cont .row .col-lg-12 h1{
-    font-family: SF Pro Text;
-font-size: 152px;
-font-weight: 600;
-line-height: 181.39px;
-text-align: center;
 
-}
-.container .cont .row .col-lg-12 .small-pre{
-    font-family: SF Pro Text;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.02em;
-text-align: center;
-color:#000000;
 
+.container .cont h1 {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 12vw;  
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000000;
+    margin-top: 20px;
 }
+
+
+.container .cont .small-pre {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container .cont {
+        padding: 40px;
+    }
+
+    .container .cont .large-pre {
+        font-size: 3rem; /* Fixed size for larger screens */
+    }
+
+    .container .cont h1 {
+        font-size: 6rem; /* Fixed size for larger screens */
+    }
+
+    .container .cont .small-pre {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .cont .large-pre {
+        font-size: 8vw;  /* Responsive font size */
+    }
+
+    .container .cont h1 {
+        font-size: 14vw;  /* Larger font size on smaller screens */
+    }
+
+    .container .cont .small-pre {
+        font-size: 1rem;
+    }
+
+    .img-fluid {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
 /* account */
 .account h1{
     font-family: SF Pro Text;
@@ -215,13 +298,13 @@ color: #FFFFFF;
 }
 /*  */
     .container-fluid {
-        width: 100%; /* Full width of the screen */
-        height: auto; /* Fixed height of 900px */
+        width: 100%; 
+        height: auto; 
         top: 40px;
-        left: 0; /* Align to the left edge */
+        left: 0; 
         gap: 0px;
-        opacity: 1; /* Visible */
-        background-color: #6DE754; /* Your desired background color */
+        opacity: 1; 
+        background-color: #6DE754; 
     }
     .container-fluid .row .col-md-4 h1{
         font-family: SF Pro Text;
